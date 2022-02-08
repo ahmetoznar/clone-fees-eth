@@ -1,0 +1,22 @@
+.home-page {
+  height: 100%;
+  &-row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    & .button-actions {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 12px;
+    }
+    & .social-actions {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 12px;
+    }
+  }
+}

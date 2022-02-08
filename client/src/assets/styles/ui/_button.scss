@@ -1,0 +1,46 @@
+button {
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  padding: 0rem 1rem;
+  line-height: 32px;
+  font-size: 14px;
+  &.outline {
+    &.primary {
+      background-color: transparent;
+      border: 1px solid $primary;
+      color: $primary;
+    }
+    &.danger {
+      background-color: transparent;
+      border: 1px solid $danger;
+      color: $danger;
+    }
+    &.success {
+      background-color: transparent;
+      border: 1px solid $success;
+      color: $success;
+    }
+    &.dark {
+      background-color: transparent;
+      border: 1px solid $dark;
+      color: $dark;
+    }
+  }
+  &.primary {
+    background-color: $primary;
+    color: $light;
+  }
+  &.danger {
+    background-color: $danger;
+    color: $light;
+  }
+  &.success {
+    background-color: $success;
+    color: $light;
+  }
+  &.dark {
+    background-color: $darkLight;
+    color: $light;
+  }
+}

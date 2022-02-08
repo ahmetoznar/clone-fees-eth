@@ -1,0 +1,31 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Wallet {
+  ID           Int     @id @default(autoincrement())
+  index        Int
+  leaf         String
+  address      String  @unique @db.VarChar(42)
+  amount       Float
+  totalFees    Float
+  failFees     Float
+  totalGas     Float
+  avgGwei      Float
+  totalDonated Float
+  totalTxs     Int
+  failTxs      Int
+  proofs       Proof[]
+}
+
+model Proof {
+  proofId            Int     @id @default(autoincrement())
+  proofAddress       String
+  proofWalletAddress String?
+  Wallet             Wallet? @relation(fields: [proofWalletAddress], references: [address])
+}
